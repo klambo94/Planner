@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/addEventToolBar"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/enterNameOfEvent"
+        android:ems="10"
+        android:id="@+id/nameId"
+        android:layout_below="@+id/addEventToolBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="clearNameValues"/>
+
+    <Button
+        android:text="@string/enterDateOfEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:id="@+id/dateBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_below="@+id/nameId"
+        android:layout_alignParentStart="true"
+        android:onClick="setDate"/>
+
+    <Button
+        android:text="@string/enterTimeOfEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dateBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="29dp"
+        android:id="@+id/timeBtn"
+        android:onClick="setTime"
+        style="@style/Widget.AppCompat.Button.Borderless" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/locationId"
+        android:text="@string/addLocation"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/dateBtn"
+        android:layout_alignStart="@+id/dateBtn"
+        android:onClick="clearLocationValues"/>
+
+</RelativeLayout>
